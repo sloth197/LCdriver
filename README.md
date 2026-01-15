@@ -7,8 +7,7 @@
 
 ##동작 흐름
 
-* 유저 공간 -> /dev/lc -> lc_read 실행 -> 가상 센서값 -> 사용자 복사 후 유저 공간 전달 -> 유저 프로그램에서 센서 값 출력                  
-        (open)     (read)   (kernel에서 lc_read실행)
+* 유저 공간 -> (open) -> /dev/lc -> (read) -> lc_read 실행 -> (kernel 내부 실행) -> 가상 센서값 -> 사용자 복사 후 유저 공간 전달 -> 유저 프로그램에서 센서 값 출력                  
 
 
 ## character device driver
